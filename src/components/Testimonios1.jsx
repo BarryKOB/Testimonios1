@@ -11,7 +11,7 @@ import '../App.css';
 // import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
 // import { IconButton } from '@mui/material';
 
-import { MyFavourite, MyFavouriteBorder, MyButton} from 'milibreria'; 
+import { MyFavourite, MyFavouriteBorder, MyButton, BarryBOB} from 'milibreria'; 
 
 // import { mybutton as  Mybutton} from 'milibreria';
 // import { BarryBOB } from 'milibreria';
@@ -55,7 +55,8 @@ function Testimonios1({ testimon }) {
                     ) : (
                         <MyFavouriteBorder iconColor="grey" onClick={handleIconClick}/>
                     )}
-                    <MyButton
+                </Card>
+                <MyButton
                         text="Hola"
                         txtcolor="blue"
                         bgcolor="red"
@@ -65,8 +66,12 @@ function Testimonios1({ testimon }) {
                         hoverTxtColor="red"
                         hoverBgColor="blue"
                         onClick={() => alert('Botón clickeado!')}
-                    />
-                </Card>
+                /> 
+                <BarryBOB
+                    title="Lucas"
+                    description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt saepe tempore ex possimus, iusto debitis omnis veniam quis animi excepturi molestias officia asperiores esse fuga dicta, alias fugit provident aut."
+                    avatar="src/assets/Carla.jpg"
+                />
             </Box>
         ))
     );
