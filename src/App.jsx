@@ -12,7 +12,6 @@ function App() {
     descripcion: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, fugit iusto? Dolorem libero molestiae incidunt totam, odit hic quaerat. Itaque doloremque illo non ducimus nobis quidem, sint magni velit dolores!",
     alt: "Chica Ingeniera en Suecia "
   },
-
   {
     id: 1,
     imgSrc: "src/assets/Elena.jpg",

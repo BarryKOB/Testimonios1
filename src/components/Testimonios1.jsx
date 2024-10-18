@@ -7,12 +7,17 @@ import CardActionArea from '@mui/material/CardActionArea';
 import Box from '@mui/material/Box';
 import '../App.css';
 
-import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
-import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
-import { IconButton } from '@mui/material';
+// import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
+// import FavoriteRoundedIcon from '@mui/icons-material/FavoriteRounded';
+// import { IconButton } from '@mui/material';
+
+import { MyFavourite, MyFavouriteBorder, MyButton} from 'milibreria'; 
+
+// import { mybutton as  Mybutton} from 'milibreria';
+// import { BarryBOB } from 'milibreria';
 
 function Testimonios1({ testimon }) {
-    const [variable, setIsFavorite] = useState(false);
+    const [isFavorite, setIsFavorite] = useState(false);
 
     const handleIconClick = () => {
         setIsFavorite(prev => !prev)
@@ -45,11 +50,22 @@ function Testimonios1({ testimon }) {
                             </Typography>
                         </CardContent>
                     </CardActionArea>
-                    <IconButton onClick={handleIconClick}>
-                        {variable === true ?
-                            <FavoriteRoundedIcon/>:<FavoriteBorderRoundedIcon/>
-                        }
-                    </IconButton>
+                    {isFavorite ? (
+                        <MyFavourite iconColor="red" onClick={handleIconClick}/>
+                    ) : (
+                        <MyFavouriteBorder iconColor="grey" onClick={handleIconClick}/>
+                    )}
+                    <MyButton
+                        text="Hola"
+                        txtcolor="blue"
+                        bgcolor="red"
+                        bordercolor="black"
+                        bordersize="1px"
+                        size="large" 
+                        hoverTxtColor="red"
+                        hoverBgColor="blue"
+                        onClick={() => alert('Botón clickeado!')}
+                    />
                 </Card>
             </Box>
         ))
