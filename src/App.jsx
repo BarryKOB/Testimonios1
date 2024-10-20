@@ -42,9 +42,11 @@ function App() {
 
 
   return (
-    <>
-      <Testimonios1 testimon={testimon} />
-    </>
+    <div>
+    {testimon.map((testimonio) => (
+      <Testimonios1 key={testimonio.id} testimonio={testimonio} />
+    ))}
+  </div>
   );
 }
 
